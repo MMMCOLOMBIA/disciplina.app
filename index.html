@@ -23,7 +23,6 @@
   body{padding-bottom:calc(76px + env(safe-area-inset-bottom));}
   .serif{font-family:Georgia,"Times New Roman",serif;}
 
-  /* Header */
   header{padding:calc(env(safe-area-inset-top) + 18px) 20px 14px;
     background:linear-gradient(180deg,#0a1422 0%,var(--navy) 100%);
     border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;}
@@ -35,19 +34,16 @@
   .greet{margin-top:6px;font-size:22px;font-weight:700;}
   .date{color:var(--muted);font-size:13px;margin-top:2px;text-transform:capitalize;}
 
-  /* Day pills */
   .days{display:flex;gap:7px;margin-top:14px;overflow-x:auto;padding-bottom:2px;}
   .day{flex:0 0 auto;min-width:42px;text-align:center;padding:7px 0;border-radius:12px;
     background:var(--navy2);border:1px solid var(--line);font-size:13px;color:var(--muted);font-weight:600;}
   .day.active{background:var(--oro);color:var(--navy);border-color:var(--oro);}
   .day small{display:block;font-size:10px;opacity:.7;}
 
-  /* Views */
   .view{display:none;padding:18px 16px 8px;}
   .view.show{display:block;animation:fade .25s ease;}
   @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
-  /* Ring */
   .ring-wrap{display:flex;align-items:center;gap:18px;background:var(--navy2);
     border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:16px;}
   .ring{position:relative;width:96px;height:96px;flex:0 0 auto;}
@@ -58,18 +54,15 @@
   .ring-info h3{font-size:15px;margin-bottom:4px;}
   .ring-info p{color:var(--muted);font-size:13px;line-height:1.45;}
 
-  /* Verse */
   .verse{background:linear-gradient(135deg,var(--azul),#04284f);border:1px solid #0c4a8f;
     border-radius:16px;padding:16px 18px;margin-bottom:16px;}
   .verse p{font-size:16px;line-height:1.5;font-style:italic;}
   .verse cite{display:block;margin-top:8px;color:var(--oro-soft);font-size:12px;font-style:normal;letter-spacing:.08em;text-transform:uppercase;font-weight:600;}
 
-  /* Section label */
   .label{display:flex;align-items:center;gap:10px;margin:18px 2px 10px;}
   .label h2{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--oro);font-weight:700;}
   .label .ln{flex:1;height:1px;background:var(--line);}
 
-  /* Task list */
   .task{display:flex;gap:12px;align-items:flex-start;background:var(--navy2);
     border:1px solid var(--line);border-radius:14px;padding:13px 14px;margin-bottom:9px;
     transition:.15s;cursor:pointer;}
@@ -92,7 +85,6 @@
   .tag-foco{background:#c8a44022;color:var(--oro-soft);border:1px solid #6b5a26;}
   .tag-freno{background:#b9444422;color:#e89393;border:1px solid #7d2f2f;}
 
-  /* Water */
   .water{background:var(--navy2);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:8px;}
   .water-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
   .water-top h3{font-size:15px;}
@@ -103,7 +95,11 @@
     transition:.15s;cursor:pointer;}
   .glass.full{background:linear-gradient(180deg,#1e6fc4,#0c4a8f);border-color:#2b86df;}
 
-  /* Pomodoro */
+  .seg{display:flex;gap:8px;margin-bottom:14px;}
+  .seg button{flex:1;background:var(--navy2);border:1px solid var(--line);color:var(--muted);
+    border-radius:12px;padding:12px;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+  .seg button.on{background:var(--azul);color:#fff;border-color:#0c4a8f;}
+
   .pomo{background:var(--navy2);border:1px solid var(--line);border-radius:18px;padding:22px 18px;text-align:center;margin-bottom:8px;}
   .pomo .mode{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--oro);font-weight:700;}
   .pomo .clock{font-size:56px;font-weight:800;letter-spacing:.02em;margin:6px 0 2px;font-variant-numeric:tabular-nums;}
@@ -115,7 +111,7 @@
   .pomo-count{margin-top:14px;color:var(--muted);font-size:13px;}
   .pomo-count b{color:var(--oro);}
   .snd{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
-  .snd button{flex:1;min-width:66px;background:var(--navy3);border:1px solid var(--line);color:var(--text);
+  .snd button{flex:1 1 28%;min-width:62px;background:var(--navy3);border:1px solid var(--line);color:var(--text);
     border-radius:12px;padding:11px 6px;font-size:12px;font-weight:600;cursor:pointer;
     display:flex;flex-direction:column;align-items:center;gap:5px;transition:.15s;}
   .snd button.on{background:var(--oro);color:var(--navy);border-color:var(--oro);}
@@ -124,7 +120,6 @@
   .vol span{font-size:12px;color:var(--muted);width:58px;}
   .vol input{flex:1;accent-color:var(--oro);height:4px;}
 
-  /* Cards (food/exercise) */
   .card{background:var(--navy2);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:11px;}
   .card h3{font-size:15px;margin-bottom:4px;}
   .card .meta{font-size:12px;color:var(--oro);font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px;}
@@ -132,11 +127,13 @@
   .card .li{font-size:14px;line-height:1.7;color:var(--text);}
   .card .li b{color:var(--oro-soft);}
   .pact{background:linear-gradient(135deg,#04284f,var(--navy2));border:1px solid #0c4a8f;}
-  .pill{display:inline-block;background:var(--navy3);border:1px solid var(--line);border-radius:999px;
-    padding:5px 12px;font-size:13px;margin:4px 6px 0 0;}
+
+  .meal{padding:9px 0;border-bottom:1px solid var(--line);}
+  .meal:last-child{border-bottom:none;}
+  .meal span{display:block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--oro-soft);margin-bottom:3px;}
+  .meal p{font-size:14px;line-height:1.45;}
 
   .ex-routine{border-left:3px solid var(--oro);}
-  .ex-routine .meta{color:var(--oro);}
   .set{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px;}
   .set:last-child{border-bottom:none;}
   .set b{color:var(--oro-soft);font-weight:700;}
@@ -144,15 +141,12 @@
   .note-box{background:#c8a4400f;border:1px dashed #6b5a26;border-radius:12px;padding:12px 14px;
     font-size:13px;color:var(--oro-soft);line-height:1.5;margin-bottom:11px;}
 
-  .empty{text-align:center;color:var(--muted);padding:40px 20px;font-size:14px;line-height:1.6;}
-
-  /* Tab bar */
   nav{position:fixed;bottom:0;left:0;right:0;background:rgba(10,20,34,.96);
     backdrop-filter:blur(12px);border-top:1px solid var(--line);
-    display:flex;padding:8px 6px calc(8px + env(safe-area-inset-bottom));z-index:30;}
-  .tab{flex:1;background:none;border:none;color:var(--muted);font-size:11px;font-weight:600;
+    display:flex;padding:8px 4px calc(8px + env(safe-area-inset-bottom));z-index:30;}
+  .tab{flex:1;background:none;border:none;color:var(--muted);font-size:10px;font-weight:600;
     display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 2px;cursor:pointer;}
-  .tab svg{width:23px;height:23px;}
+  .tab svg{width:22px;height:22px;}
   .tab.active{color:var(--oro);}
   .toast{position:fixed;bottom:calc(90px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);
     background:var(--oro);color:var(--navy);padding:10px 18px;border-radius:999px;font-weight:700;font-size:14px;
@@ -203,9 +197,12 @@
   </div>
 </section>
 
-<!-- POMODORO -->
+<!-- FOCO -->
 <section class="view" id="v-foco">
-  <div class="label"><h2>Trabajo profundo · 45 / 5</h2><div class="ln"></div></div>
+  <div class="seg" id="focoSeg">
+    <button data-m="trabajo" class="on">Trabajo · 45 / 5</button>
+    <button data-m="lectura">Lectura · 20</button>
+  </div>
   <div class="pomo">
     <div class="mode" id="pomoMode">Concentración</div>
     <div class="clock" id="pomoClock">45:00</div>
@@ -214,27 +211,25 @@
       <button class="btn btn-go" id="pomoStart">Iniciar</button>
       <button class="btn btn-ghost" id="pomoReset">Reiniciar</button>
     </div>
-    <div class="pomo-count">Bloques hoy: <b id="pomoDone">0</b> / 8</div>
+    <div class="pomo-count" id="focoCount">Bloques hoy: <b id="pomoDone">0</b> / 8</div>
   </div>
+
   <div class="card">
     <div class="meta">Sonido ambiente</div>
     <div class="snd" id="sndBtns">
       <button data-k="off"><span class="ic">🔇</span>Apagado</button>
-      <button data-k="bosque"><span class="ic">🌳</span>Bosque</button>
+      <button data-k="mar"><span class="ic">🌊</span>Mar</button>
       <button data-k="lluvia"><span class="ic">🌧️</span>Lluvia</button>
-      <button data-k="arroyo"><span class="ic">🏞️</span>Arroyo</button>
+      <button data-k="bosque"><span class="ic">🌳</span>Bosque</button>
+      <button data-k="tono"><span class="ic">🎵</span>Tono</button>
     </div>
-    <div class="vol"><span>Volumen</span><input type="range" id="sndVol" min="0" max="100" value="50"></div>
-    <p style="font-size:12px;color:var(--muted);margin-top:10px;line-height:1.5;">Suena mientras la app esté abierta. Al iniciar un bloque se reanuda; al pausar, se silencia.</p>
+    <div class="vol"><span>Volumen</span><input type="range" id="sndVol" min="0" max="100" value="60"></div>
+    <p style="font-size:12px;color:var(--muted);margin-top:10px;line-height:1.5;">Suena mientras la app esté abierta. En iPhone, sube el interruptor lateral (que no esté en silencio).</p>
   </div>
-  <div class="note-box">
+
+  <div class="note-box" id="focoNote">
     Ritmo del día: 4 bloques en la mañana (8:50–12:30) y 4 en la tarde (1:30–5:00).
     Cada bloque son 45 minutos de un solo enfoque. Cuando suene, descansa 5 minutos: agua, estírate, mira lejos.
-  </div>
-  <div class="card pact">
-    <div class="meta">Pausas activas</div>
-    <p class="li">☀️ <b>10:30 a.m.</b> — Camina 10 min, hombros y cuello.<br>
-    🌤️ <b>3:00 p.m.</b> — Camina 10 min, respira, hidrátate.</p>
   </div>
 </section>
 
@@ -252,8 +247,8 @@
     </p>
   </div>
 
-  <div class="label"><h2>Desayunos de la semana</h2><div class="ln"></div></div>
-  <div id="breakfastList"></div>
+  <div class="label"><h2>Plan de la semana</h2><div class="ln"></div></div>
+  <div id="mealList"></div>
 
   <div class="label"><h2>Snacks (elige uno)</h2><div class="ln"></div></div>
   <div class="card">
@@ -264,19 +259,9 @@
     <div class="meta">Media tarde · ~3:00 p.m.</div>
     <p class="li">Yogur natural · Huevo cocido · Zanahoria y pepino en bastones · Naranja</p>
   </div>
-
-  <div class="label"><h2>Guía de almuerzo y cena</h2><div class="ln"></div></div>
-  <div class="card">
-    <div class="meta">Almuerzo · 12:30–1:30 p.m.</div>
-    <p class="li">🍗 Proteína (palma de la mano): pollo, huevo, pescado, carne magra<br>
-    🥦 Verduras: la mitad del plato<br>
-    🥔 Carbohidrato ligero (un puño): papa, yuca o plátano<br>
-    <b>Sin repetir.</b> Agua, no gaseosa.</p>
-  </div>
-  <div class="card">
-    <div class="meta">Cena ligera · antes de 7:00 p.m.</div>
-    <p class="li">Sopa o ensalada + una proteína ligera (huevo, atún, pollo).
-    Entre más temprano y más ligera, mejor duermes.</p>
+  <div class="note-box">
+    Porciones guía: proteína del tamaño de tu palma, verduras la mitad del plato,
+    carbohidrato (papa, yuca o plátano) un puño. Agua, no gaseosa.
   </div>
 </section>
 
@@ -349,7 +334,7 @@
 <div class="toast" id="toast"></div>
 
 <script>
-/* ---------- almacenamiento seguro (funciona hospedado; en vista previa usa memoria) ---------- */
+/* ---------- almacenamiento seguro ---------- */
 const mem={};
 const Store={
   get(k,f){try{const v=localStorage.getItem(k);return v!=null?JSON.parse(v):(mem[k]!==undefined?mem[k]:f);}catch(e){return mem[k]!==undefined?mem[k]:f;}},
@@ -361,9 +346,9 @@ const DIAS=["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"
 const DIAS_S=["Dom","Lun","Mar","Mié","Jue","Vie","Sáb"];
 function todayKey(d=new Date()){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 const realDay=new Date().getDay();
-let viewDay=realDay; // día que se está viendo
+let viewDay=realDay;
 
-/* ---------- versículos (rotan por día del mes) ---------- */
+/* ---------- versículos ---------- */
 const VERSES=[
   ["Todo lo puedo en Cristo que me fortalece.","Filipenses 4:13"],
   ["Esfuérzate y sé valiente; no temas ni desmayes.","Josué 1:9"],
@@ -381,18 +366,17 @@ const VERSES=[
   ["Las misericordias de Jehová son nuevas cada mañana.","Lamentaciones 3:23"]
 ];
 
-/* ---------- horarios por día ---------- */
-const RUN_DAYS=[1,2,4,5,6]; // Lun, Mar, Jue, Vie, Sáb
-const RUTINAS=["A","B","C","A","B"]; // asignación por orden de día de trote
+/* ---------- horarios ---------- */
+const RUN_DAYS=[1,2,4,5,6];
+const RUTINAS=["A","B","C","A","B"];
 function rutinaDe(day){const i=RUN_DAYS.indexOf(day);return i>=0?RUTINAS[i]:null;}
 
 function buildDay(day){
   const t=[];
   const isWeekday=day>=1&&day<=5;
   const run=RUN_DAYS.includes(day);
-  // mañana
   t.push({id:'wake',time:'5:00',label:'Despertar + 1 vaso de agua',note:'Sin celular. Pies al piso.',tag:'cuerpo'});
-  t.push({id:'read',time:'5:02',label:'Lectura bíblica personal',note:'20 min. Lee, pregunta, aplica.',tag:'fe'});
+  t.push({id:'read',time:'5:02',label:'Lectura bíblica personal',note:'20 min. Usa el foco de Lectura.',tag:'fe'});
   if(run){
     t.push({id:'run',time:'5:22',label:'Trotar 40 min',note:'Aire fresco. El cuerpo sigue al espíritu.',tag:'cuerpo'});
     t.push({id:'func',time:'6:05',label:'Ejercicio funcional (Rutina '+rutinaDe(day)+')',note:'10–15 min, ver pestaña Ejercicio.',tag:'cuerpo'});
@@ -408,7 +392,6 @@ function buildDay(day){
     t.push({id:'pomoPM',time:'1:30',label:'Bloque de trabajo (4×45)',note:'Pomodoro. Pausa activa 3:00.',tag:'foco'});
     t.push({id:'out',time:'5:00',label:'Salida del trabajo',note:'',tag:''});
   }
-  // tarde/noche por día
   if(day===1){ t.push({id:'eve',time:'6:30',label:'Cena ligera + noche tranquila',note:'Tu día más libre. Descansa bien.',tag:''}); }
   if(day===2){ t.push({id:'ig',time:'7:00',label:'Iglesia',note:'Llegas a casa ~9:40 p.m.',tag:'fe'}); }
   if(day===3){
@@ -418,33 +401,46 @@ function buildDay(day){
   }
   if(day===4){ t.push({id:'berea',time:'6:45',label:'Berea en su Presencia',note:'Casa ~9:40 p.m.',tag:'fe'}); }
   if(day===5){ t.push({id:'eve',time:'6:30',label:'Cena ligera + descanso',note:'Cierra la semana laboral con calma.',tag:''}); }
-  if(day===6){ // sábado
+  if(day===6){
     t.push({id:'berea',time:'8:00',label:'Clase Berea en su Presencia',note:'',tag:'fe'});
     t.push({id:'tema',time:'11:00',label:'Preparar el tema',note:'Aprovecha la mañana libre.',tag:'foco'});
     t.push({id:'jov',time:'6:00',label:'Reunión de jóvenes',note:'',tag:'fe'});
   }
-  if(day===0){ // domingo
+  if(day===0){
     t.push({id:'ensayo',time:'8:00',label:'Ensayo de alabanza',note:'',tag:'fe'});
     t.push({id:'culto',time:'10:00',label:'Culto',note:'',tag:'fe'});
     t.push({id:'descanso',time:'3:00',label:'Casa y descanso',note:'Prepara la semana. Ropa lista para el lunes.',tag:''});
   }
-  // noche común
   const sleepLate = day===3;
   t.push({id:'phoneout',time:sleepLate?'11:30':'10:00',label:'Celular fuera del cuarto',note:'Que duerma en otra habitación.',tag:'freno'});
   t.push({id:'sleep',time:sleepLate?'12:00':'10:30',label:'Dormir',note:'El sueño es la base de todo lo demás.',tag:'cuerpo'});
   return t;
 }
 
-/* ---------- desayunos ---------- */
-const DESAYUNOS=[
-  ["Domingo","Fruta variada + yogur natural + huevo cocido","Rápido antes del ensayo"],
-  ["Lunes","Huevos pericos (2) + 1 arepa pequeña + café sin azúcar","Proteína para arrancar"],
-  ["Martes","Avena cocida con banano y canela + huevo cocido","Energía estable"],
-  ["Miércoles","Yogur griego + frutos secos + papaya","Día largo: nutre bien"],
-  ["Jueves","Huevos revueltos + aguacate + tomate","Grasa buena y proteína"],
-  ["Viernes","Tortilla de huevo con espinaca + 1 tajada de queso","Ligero y completo"],
-  ["Sábado","Calentado ligero (frijol + huevo, sin arroz) o huevos + arepa","Antes de Berea"]
-];
+/* ---------- comida: desayuno / almuerzo / cena por día ---------- */
+const MEALS={
+  1:{des:"Huevos pericos (2) + 1 arepa pequeña + café sin azúcar",
+     alm:"Pechuga de pollo a la plancha + ensalada grande + papa pequeña",
+     cen:"Crema de verduras + 1 huevo cocido"},
+  2:{des:"Avena cocida con banano y canela + 1 huevo cocido",
+     alm:"Pescado al horno + verduras salteadas + plátano cocido pequeño",
+     cen:"Ensalada de atún con aguacate y tomate"},
+  3:{des:"Yogur griego natural + frutos secos + papaya",
+     alm:"Carne magra + lentejas + ensalada",
+     cen:"Sopa de verduras + 1 tajada de queso (temprano, día largo)"},
+  4:{des:"Huevos revueltos + aguacate + tomate",
+     alm:"Pollo desmechado + arroz integral (porción pequeña) + brócoli",
+     cen:"Revuelto de huevo con espinaca"},
+  5:{des:"Tortilla de huevo con espinaca + 1 tajada de queso",
+     alm:"Pescado + ensalada grande + yuca pequeña",
+     cen:"Crema de ahuyama + 1 huevo cocido"},
+  6:{des:"Calentado ligero (frijol + huevo, sin arroz) o huevos + arepa de huevo",
+     alm:"Pollo + verduras al vapor (o sancocho ligero, poca papa)",
+     cen:"Ensalada con pollo + aguacate"},
+  0:{des:"Fruta variada + yogur natural + 1 huevo cocido",
+     alm:"Almuerzo en familia: proteína + verduras, porción moderada",
+     cen:"Sopa ligera + fruta"}
+};
 
 /* ---------- rutinas funcionales ---------- */
 const ROUTINES={
@@ -453,137 +449,7 @@ const ROUTINES={
   C:{nombre:"Rutina C · Cuerpo completo",sets:[["Burpees","3 × 8"],["Escaladores (mountain climbers)","3 × 20"],["Saltos de tijera","3 × 30"],["Sentadilla con salto","3 × 10"]]}
 };
 
-/* ---------- render ---------- */
-const $=s=>document.querySelector(s);
-function dayChecks(day){ return Store.get('chk_'+todayKey()+'_'+day, {}); }
-function setDayChecks(day,o){ Store.set('chk_'+todayKey()+'_'+day,o); }
-
-function renderPills(){
-  const w=$('#dayPills'); w.innerHTML='';
-  for(let i=0;i<7;i++){
-    const d=(i); // 0..6 Dom..Sab — mostrar Lun primero
-  }
-  // orden Lun..Dom
-  const order=[1,2,3,4,5,6,0];
-  order.forEach(d=>{
-    const el=document.createElement('div');
-    el.className='day'+(d===viewDay?' active':'');
-    el.innerHTML=DIAS_S[d]+(d===realDay?'<small>hoy</small>':'<small>&nbsp;</small>');
-    el.onclick=()=>{viewDay=d;renderAll();};
-    w.appendChild(el);
-  });
-}
-
-function renderHeader(){
-  const now=new Date();
-  const h=now.getHours();
-  $('#greet').textContent=(h<12?'Buenos días':h<19?'Buenas tardes':'Buenas noches')+', Daniel';
-  $('#dateStr').textContent=DIAS[viewDay]+(viewDay===realDay?' · '+now.getDate()+'/'+(now.getMonth()+1):' (vista previa)');
-  const v=VERSES[now.getDate()%VERSES.length];
-  $('#verseText').textContent='“'+v[0]+'”';
-  $('#verseRef').textContent=v[1];
-}
-
-function renderTasks(){
-  const list=$('#taskList'); list.innerHTML='';
-  const tasks=buildDay(viewDay);
-  const checks=dayChecks(viewDay);
-  let done=0;
-  tasks.forEach(t=>{
-    const isDone=!!checks[t.id]; if(isDone)done++;
-    const el=document.createElement('div');
-    el.className='task'+(isDone?' done':'');
-    const tagHtml=t.tag?`<span class="t-tag tag-${t.tag}">${({fe:'Fe',cuerpo:'Cuerpo',foco:'Foco',freno:'Freno'})[t.tag]}</span>`:'';
-    el.innerHTML=`<div class="t-time">${t.time}</div>
-      <div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
-      <div class="t-body"><div class="t-label">${t.label}</div>
-      ${t.note?`<div class="t-note">${t.note}</div>`:''}${tagHtml}</div>`;
-    el.onclick=()=>{checks[t.id]=!checks[t.id];setDayChecks(viewDay,checks);renderTasks();renderRing();saveScore();updateStreak();
-      if(checks[t.id])toast('✓ '+t.label);};
-    list.appendChild(el);
-  });
-  return {done,total:tasks.length};
-}
-
-function renderRing(){
-  const tasks=buildDay(viewDay), checks=dayChecks(viewDay);
-  let done=0; tasks.forEach(t=>{if(checks[t.id])done++;});
-  const pct=tasks.length?Math.round(done/tasks.length*100):0;
-  const C=263.9;
-  $('#ringFill').style.strokeDashoffset=C-(C*pct/100);
-  $('#ringPct').textContent=pct+'%';
-  if(pct===0){$('#ringTitle').textContent='Hoy es tu día';$('#ringMsg').textContent='Marca cada disciplina al cumplirla. No buscas perfección, buscas avanzar.';}
-  else if(pct<50){$('#ringTitle').textContent='Vas comenzando';$('#ringMsg').textContent='Buen arranque. Un paso después del otro.';}
-  else if(pct<100){$('#ringTitle').textContent='Ya casi';$('#ringMsg').textContent='Vas firme. Termina lo que empezaste.';}
-  else{$('#ringTitle').textContent='¡Día completo! 🔥';$('#ringMsg').textContent='Cumpliste tu palabra hoy. Así se reconstruye la confianza.';}
-}
-
-function saveScore(){
-  const tasks=buildDay(viewDay), checks=dayChecks(viewDay);
-  let done=0; tasks.forEach(t=>{if(checks[t.id])done++;});
-  const pct=tasks.length?done/tasks.length:0;
-  Store.set('score_'+todayKey(), pct); // guarda score del día real
-}
-
-function updateStreak(){
-  // racha = días consecutivos (hasta hoy/ayer) con score>=0.7
-  let streak=0;
-  for(let i=0;i<60;i++){
-    const d=new Date(); d.setDate(d.getDate()-i);
-    const sc=Store.get('score_'+todayKey(d),null);
-    if(sc===null){ if(i===0)continue; else break; }
-    if(sc>=0.7) streak++; else { if(i===0){/*hoy aún en progreso*/} else break; }
-    if(i===0 && sc<0.7) {/* hoy incompleto, no rompe */}
-  }
-  $('#streakNum').textContent=streak;
-  $('#streakBig').textContent=streak;
-  const C=263.9, frac=Math.min(streak/14,1);
-  $('#ringFill2').style.strokeDashoffset=C-(C*frac);
-}
-
-function renderWater(){
-  const g=$('#glasses'); g.innerHTML='';
-  let n=Store.get('water_'+todayKey(),0);
-  $('#waterCount').textContent=n;
-  for(let i=0;i<8;i++){
-    const el=document.createElement('div');
-    el.className='glass'+(i<n?' full':'');
-    el.textContent='💧';
-    el.style.opacity=i<n?'1':'.35';
-    el.onclick=()=>{let c=Store.get('water_'+todayKey(),0);c=(i<c)?i:i+1;Store.set('water_'+todayKey(),c);renderWater();
-      if(c===8)toast('💧 ¡2 litros completos!');};
-    g.appendChild(el);
-  }
-}
-
-function renderFood(){
-  const w=$('#breakfastList'); w.innerHTML='';
-  const order=[1,2,3,4,5,6,0];
-  order.forEach(d=>{
-    const D=DESAYUNOS[d===0?0:d];
-    const c=document.createElement('div'); c.className='card'+(d===realDay?' ex-routine':'');
-    c.innerHTML=`<div class="meta">${DIAS[d]}${d===realDay?' · hoy':''}</div><h3>${D[1]}</h3><p style="color:var(--muted);font-size:13px;margin-top:4px;">${D[2]}</p>`;
-    w.appendChild(c);
-  });
-}
-
-function renderExercise(){
-  const run=RUN_DAYS.includes(viewDay);
-  const box=$('#exToday');
-  if(run){const r=rutinaDe(viewDay);box.innerHTML=`Hoy (<b>${DIAS[viewDay]}</b>) es día de trote. Te toca la <b>Rutina ${r}</b> después de correr.`;}
-  else{box.innerHTML=`Hoy (<b>${DIAS[viewDay]}</b>) es descanso físico. No hay trote ni funcional — deja que el cuerpo se recupere.`;}
-  const w=$('#routineList'); w.innerHTML='';
-  ['A','B','C'].forEach(k=>{
-    const R=ROUTINES[k];
-    const active=run&&rutinaDe(viewDay)===k;
-    const c=document.createElement('div'); c.className='card'+(active?' ex-routine':'');
-    let s=`<div class="meta">${active?'★ Hoy · ':''}${R.nombre}</div>`;
-    R.sets.forEach(x=>{s+=`<div class="set"><span>${x[0]}</span><b>${x[1]}</b></div>`;});
-    c.innerHTML=s; w.appendChild(c);
-  });
-}
-
-/* ---------- motor de sonido ambiente (generado, sin archivos) ---------- */
+/* ---------- motor de sonido (generado, sin internet) ---------- */
 const Sound={
   ctx:null, master:null, nodes:[], timers:[], current:'off', vol:0.6,
   ensure(){
@@ -591,117 +457,263 @@ const Sound={
       this.ctx=new (window.AudioContext||window.webkitAudioContext)();
       this.master=this.ctx.createGain(); this.master.gain.value=this.vol;
       this.master.connect(this.ctx.destination);
-      try{ const b=this.ctx.createBuffer(1,1,22050), s=this.ctx.createBufferSource();
-        s.buffer=b; s.connect(this.ctx.destination); s.start(0); }catch(e){}
+      try{const b=this.ctx.createBuffer(1,1,22050),s=this.ctx.createBufferSource();s.buffer=b;s.connect(this.ctx.destination);s.start(0);}catch(e){}
     }
-    if(this.ctx.state==='suspended'){ try{this.ctx.resume();}catch(e){} }
+    if(this.ctx.state==='suspended'){try{this.ctx.resume();}catch(e){}}
     return this.ctx.state;
   },
-  noiseBuffer(type){
-    const ctx=this.ctx, len=ctx.sampleRate*2, buf=ctx.createBuffer(1,len,ctx.sampleRate), d=buf.getChannelData(0);
-    let last=0;
+  buf(type){
+    const ctx=this.ctx,len=ctx.sampleRate*3,b=ctx.createBuffer(1,len,ctx.sampleRate),d=b.getChannelData(0);
+    let last=0,b0=0,b1=0,b2=0,b3=0,b4=0,b5=0,b6=0;
     for(let i=0;i<len;i++){const w=Math.random()*2-1;
-      if(type==='brown'){last=(last+0.02*w)/1.02; d[i]=last*3.5;} else d[i]=w;}
-    return buf;
+      if(type==='brown'){last=(last+0.02*w)/1.02;d[i]=last*3.5;}
+      else if(type==='pink'){
+        b0=0.99886*b0+w*0.0555179;b1=0.99332*b1+w*0.0750759;b2=0.96900*b2+w*0.1538520;
+        b3=0.86650*b3+w*0.3104856;b4=0.55000*b4+w*0.5329522;b5=-0.7616*b5-w*0.0168980;
+        d[i]=(b0+b1+b2+b3+b4+b5+b6+w*0.5362)*0.11;b6=w*0.115926;}
+      else d[i]=w;}
+    return b;
   },
-  startNoise(type,freq,q,gain){
+  noise(type,ftype,freq,q,gain){
     const ctx=this.ctx;
-    const src=ctx.createBufferSource(); src.buffer=this.noiseBuffer(type); src.loop=true;
-    const filt=ctx.createBiquadFilter(); filt.type=(type==='brown')?'lowpass':'bandpass';
-    filt.frequency.value=freq; filt.Q.value=q||1;
-    const g=ctx.createGain(); g.gain.value=gain;
-    src.connect(filt); filt.connect(g); g.connect(this.master); src.start();
-    this.nodes.push(src,filt,g); return {src,filt,g};
+    const src=ctx.createBufferSource();src.buffer=this.buf(type);src.loop=true;
+    const f=ctx.createBiquadFilter();f.type=ftype;f.frequency.value=freq;f.Q.value=q||0.7;
+    const g=ctx.createGain();g.gain.value=gain;
+    src.connect(f);f.connect(g);g.connect(this.master);src.start();
+    this.nodes.push(src,f,g);return {src,f,g};
   },
-  mod(g,rate,depth){
+  wave(g,rate,min,max){ /* olas / brisa: mueve la ganancia lentamente */
     const ctx=this.ctx;
-    const lfo=ctx.createOscillator(); lfo.frequency.value=rate;
-    const la=ctx.createGain(); la.gain.value=depth;
-    lfo.connect(la); la.connect(g.gain); lfo.start(); this.nodes.push(lfo,la);
+    g.gain.value=0;
+    const lfo=ctx.createOscillator();lfo.type='sine';lfo.frequency.value=rate;
+    const amp=ctx.createGain();amp.gain.value=(max-min)/2;
+    const off=ctx.createConstantSource();off.offset.value=min+(max-min)/2;
+    lfo.connect(amp);amp.connect(g.gain);off.connect(g.gain);
+    lfo.start();off.start();this.nodes.push(lfo,amp,off);
+  },
+  tone(freq,gain,trem){
+    const ctx=this.ctx;
+    const o=ctx.createOscillator();o.type='sine';o.frequency.value=freq;
+    const g=ctx.createGain();g.gain.value=gain;
+    o.connect(g);g.connect(this.master);o.start();this.nodes.push(o,g);
+    if(trem){const lfo=ctx.createOscillator();lfo.frequency.value=trem;const la=ctx.createGain();la.gain.value=gain*0.35;lfo.connect(la);la.connect(g.gain);lfo.start();this.nodes.push(lfo,la);}
   },
   chirp(){
-    const ctx=this.ctx, t=ctx.currentTime, reps=1+Math.floor(Math.random()*3);
+    const ctx=this.ctx,t=ctx.currentTime,reps=1+Math.floor(Math.random()*3);
     for(let r=0;r<reps;r++){
-      const o=ctx.createOscillator(); o.type='sine'; const g=ctx.createGain();
-      const base=1800+Math.random()*1600, st=t+r*0.13;
+      const o=ctx.createOscillator();o.type='sine';const g=ctx.createGain();
+      const base=1700+Math.random()*1400,st=t+r*0.13;
       o.frequency.setValueAtTime(base,st);
       o.frequency.exponentialRampToValueAtTime(base*1.5,st+0.05);
       o.frequency.exponentialRampToValueAtTime(base*0.85,st+0.12);
       g.gain.setValueAtTime(0.0001,st);
-      g.gain.linearRampToValueAtTime(0.24,st+0.02);
+      g.gain.linearRampToValueAtTime(0.13,st+0.02);
       g.gain.exponentialRampToValueAtTime(0.0001,st+0.13);
-      o.connect(g); g.connect(this.master); o.start(st); o.stop(st+0.17);
+      o.connect(g);g.connect(this.master);o.start(st);o.stop(st+0.17);
     }
-    const next=1200+Math.random()*4200;
+    const next=2500+Math.random()*5000;
     this.timers.push(setTimeout(()=>{if(this.current==='bosque')this.chirp();},next));
   },
   play(kind){
-    this.stop(); this.ensure(); this.current=kind;
-    if(kind==='bosque'){
-      this.startNoise('brown',450,1,0.20);
-      this.startNoise('white',3000,0.8,0.02);
-      this.timers.push(setTimeout(()=>{if(this.current==='bosque')this.chirp();},600));
+    this.stop();this.ensure();this.current=kind;
+    if(kind==='mar'){
+      const a=this.noise('brown','lowpass',500,0.6,0);this.wave(a.g,0.09,0.05,0.22);
+      const b=this.noise('brown','lowpass',320,0.6,0);this.wave(b.g,0.055,0.03,0.12);
+      const foam=this.noise('pink','highpass',1500,0.4,0);this.wave(foam.g,0.085,0.0,0.05);
     }else if(kind==='lluvia'){
-      const a=this.startNoise('white',1500,0.6,0.24);
-      this.startNoise('brown',300,1,0.11); this.mod(a.g,0.15,0.06);
-    }else if(kind==='arroyo'){
-      this.startNoise('brown',540,1,0.22);
-      const b=this.startNoise('white',1900,0.5,0.08); this.mod(b.g,0.5,0.04);
+      const bed=this.noise('brown','lowpass',470,0.5,0);this.wave(bed.g,0.07,0.10,0.17);
+      const tex=this.noise('pink','lowpass',900,0.4,0);this.wave(tex.g,0.28,0.04,0.10);
+    }else if(kind==='bosque'){
+      const w=this.noise('brown','lowpass',420,0.6,0);this.wave(w.g,0.07,0.06,0.15);
+      this.noise('pink','highpass',2200,0.4,0.012);
+      this.timers.push(setTimeout(()=>{if(this.current==='bosque')this.chirp();},800));
+    }else if(kind==='tono'){
+      this.noise('brown','lowpass',300,0.7,0.045);
+      this.tone(130.81,0.05,0.05);
+      this.tone(196.00,0.038,0.07);
+      this.tone(261.63,0.020,0.06);
     }
   },
   stop(){
-    this.timers.forEach(t=>clearTimeout(t)); this.timers=[];
+    this.timers.forEach(t=>clearTimeout(t));this.timers=[];
     this.nodes.forEach(n=>{try{n.stop&&n.stop();}catch(e){}try{n.disconnect();}catch(e){}});
     this.nodes=[];
   },
-  setVol(v){this.vol=v; if(this.master)this.master.gain.value=v;},
+  setVol(v){this.vol=v;if(this.master)this.master.gain.value=v;},
   pause(){if(this.ctx)this.ctx.suspend();},
   resume(){this.ensure();}
 };
 let soundChoice='off';
 function chooseSound(k){
-  soundChoice=k; Store.set('sndChoice',k);
+  soundChoice=k;Store.set('sndChoice',k);
   if(k==='off'){Sound.stop();Sound.current='off';toast('Sonido apagado');}
-  else{Sound.ensure();Sound.play(k);toast(({bosque:'🌳 Bosque',lluvia:'🌧️ Lluvia',arroyo:'🏞️ Arroyo'})[k]);
+  else{Sound.ensure();Sound.play(k);toast(({mar:'🌊 Mar',lluvia:'🌧️ Lluvia',bosque:'🌳 Bosque',tono:'🎵 Tono'})[k]);
     setTimeout(()=>{if(Sound.ctx&&Sound.ctx.state!=='running')toast('Toca de nuevo para activar el audio');},350);}
   renderSnd();
 }
 function renderSnd(){document.querySelectorAll('#sndBtns button').forEach(b=>b.classList.toggle('on',b.dataset.k===soundChoice));}
 document.querySelectorAll('#sndBtns button').forEach(b=>b.onclick=()=>chooseSound(b.dataset.k));
+
+/* ---------- foco: trabajo (45/5) y lectura (20) ---------- */
+const $=s=>document.querySelector(s);
+let focoMode='trabajo';
+let pomoT=45*60, pomoRun=false, pomoBreak=false, pomoInt=null;
+function fmt(s){return String(Math.floor(s/60)).padStart(2,'0')+':'+String(Math.floor(s%60)).padStart(2,'0');}
+function setFoco(m){
+  focoMode=m;pomoRun=false;clearInterval(pomoInt);pomoBreak=false;
+  pomoT=(m==='trabajo'?45:20)*60;
+  document.querySelectorAll('#focoSeg button').forEach(b=>b.classList.toggle('on',b.dataset.m===m));
+  $('#focoNote').textContent=(m==='trabajo')
+    ?'Ritmo del día: 4 bloques en la mañana (8:50–12:30) y 4 en la tarde (1:30–5:00). Cada bloque son 45 minutos de un solo enfoque. Cuando suene, descansa 5 minutos.'
+    :'Tus 20 minutos con la Palabra (5:02 a.m.). Lee, pregunta “¿qué me dice Dios hoy?”, y aplica. Pon un sonido suave si te ayuda a concentrarte.';
+  renderPomo();
+}
+function renderPomo(){
+  $('#pomoClock').textContent=fmt(pomoT);
+  if(focoMode==='trabajo'){
+    $('#pomoMode').textContent=pomoBreak?'Descanso':'Concentración';
+    $('#pomoSub').textContent=pomoBreak?'Respira, hidrátate, mira lejos.':'Un bloque a la vez. Sin celular.';
+    $('#focoCount').innerHTML='Bloques hoy: <b>'+Store.get('pomo_'+todayKey(),0)+'</b> / 8';
+  }else{
+    $('#pomoMode').textContent='Lectura';
+    $('#pomoSub').textContent='20 minutos con la Palabra. Sin distracciones.';
+    $('#focoCount').innerHTML='Lecturas hoy: <b>'+Store.get('lect_'+todayKey(),0)+'</b>';
+  }
+  $('#pomoStart').textContent=pomoRun?'Pausar':'Iniciar';
+}
+function beep(){try{const a=new(window.AudioContext||window.webkitAudioContext)();const o=a.createOscillator();const g=a.createGain();o.connect(g);g.connect(a.destination);o.frequency.value=880;g.gain.value=.2;o.start();setTimeout(()=>{o.stop();a.close();},450);}catch(e){}}
+function pomoTick(){
+  pomoT--;
+  if(pomoT<=0){
+    beep();
+    if(focoMode==='lectura'){
+      const n=Store.get('lect_'+todayKey(),0)+1;Store.set('lect_'+todayKey(),n);
+      toast('✓ Lectura completada');pomoRun=false;clearInterval(pomoInt);pomoT=20*60;
+    }else if(!pomoBreak){
+      const n=Store.get('pomo_'+todayKey(),0)+1;Store.set('pomo_'+todayKey(),n);
+      toast('✓ Bloque completado · '+n+'/8');pomoBreak=true;pomoT=5*60;
+    }else{toast('A trabajar 💪');pomoBreak=false;pomoT=45*60;}
+  }
+  renderPomo();
+}
+document.querySelectorAll('#focoSeg button').forEach(b=>b.onclick=()=>setFoco(b.dataset.m));
+$('#pomoStart').onclick=()=>{pomoRun=!pomoRun;if(pomoRun){pomoInt=setInterval(pomoTick,1000);if(soundChoice!=='off'){Sound.resume();if(Sound.current!==soundChoice)Sound.play(soundChoice);}}else{clearInterval(pomoInt);if(soundChoice!=='off')Sound.pause();}renderPomo();};
+$('#pomoReset').onclick=()=>{clearInterval(pomoInt);pomoRun=false;pomoBreak=false;pomoT=(focoMode==='trabajo'?45:20)*60;renderPomo();};
 $('#sndVol').oninput=e=>{Sound.setVol(e.target.value/100);Store.set('sndVol',+e.target.value);};
 
-/* ---------- pomodoro ---------- */
-let pomoT=45*60, pomoRun=false, pomoBreak=false, pomoInt=null;
-function fmt(s){return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');}
-function renderPomo(){$('#pomoClock').textContent=fmt(pomoT);
-  $('#pomoMode').textContent=pomoBreak?'Descanso':'Concentración';
-  $('#pomoSub').textContent=pomoBreak?'Respira, hidrátate, mira lejos.':'Un bloque a la vez. Sin celular.';
-  $('#pomoDone').textContent=Store.get('pomo_'+todayKey(),0);
-  $('#pomoStart').textContent=pomoRun?'Pausar':'Iniciar';}
-function beep(){try{const a=new(window.AudioContext||window.webkitAudioContext)();const o=a.createOscillator();const g=a.createGain();o.connect(g);g.connect(a.destination);o.frequency.value=880;g.gain.value=.2;o.start();setTimeout(()=>{o.stop();a.close();},450);}catch(e){}}
-function pomoTick(){pomoT--;if(pomoT<=0){beep();if(!pomoBreak){const n=Store.get('pomo_'+todayKey(),0)+1;Store.set('pomo_'+todayKey(),n);toast('✓ Bloque completado · '+n+'/8');pomoBreak=true;pomoT=5*60;}else{toast('A trabajar 💪');pomoBreak=false;pomoT=45*60;}}renderPomo();}
-$('#pomoStart').onclick=()=>{pomoRun=!pomoRun;if(pomoRun){pomoInt=setInterval(pomoTick,1000);if(soundChoice!=='off'){Sound.resume();if(Sound.current!==soundChoice)Sound.play(soundChoice);}}else{clearInterval(pomoInt);if(soundChoice!=='off')Sound.pause();}renderPomo();};
-$('#pomoReset').onclick=()=>{clearInterval(pomoInt);pomoRun=false;pomoBreak=false;pomoT=45*60;renderPomo();};
+/* ---------- render ---------- */
+function dayChecks(day){return Store.get('chk_'+todayKey()+'_'+day,{});}
+function setDayChecks(day,o){Store.set('chk_'+todayKey()+'_'+day,o);}
 
-/* ---------- semana barras ---------- */
+function renderPills(){
+  const w=$('#dayPills');w.innerHTML='';
+  [1,2,3,4,5,6,0].forEach(d=>{
+    const el=document.createElement('div');
+    el.className='day'+(d===viewDay?' active':'');
+    el.innerHTML=DIAS_S[d]+(d===realDay?'<small>hoy</small>':'<small>&nbsp;</small>');
+    el.onclick=()=>{viewDay=d;renderAll();};
+    w.appendChild(el);
+  });
+}
+function renderHeader(){
+  const now=new Date(),h=now.getHours();
+  $('#greet').textContent=(h<12?'Buenos días':h<19?'Buenas tardes':'Buenas noches')+', Daniel';
+  $('#dateStr').textContent=DIAS[viewDay]+(viewDay===realDay?' · '+now.getDate()+'/'+(now.getMonth()+1):' (vista previa)');
+  const v=VERSES[now.getDate()%VERSES.length];
+  $('#verseText').textContent='“'+v[0]+'”';$('#verseRef').textContent=v[1];
+}
+function renderTasks(){
+  const list=$('#taskList');list.innerHTML='';
+  const tasks=buildDay(viewDay),checks=dayChecks(viewDay);
+  tasks.forEach(t=>{
+    const isDone=!!checks[t.id];
+    const el=document.createElement('div');el.className='task'+(isDone?' done':'');
+    const tagHtml=t.tag?'<span class="t-tag tag-'+t.tag+'">'+({fe:'Fe',cuerpo:'Cuerpo',foco:'Foco',freno:'Freno'})[t.tag]+'</span>':'';
+    el.innerHTML='<div class="t-time">'+t.time+'</div>'+
+      '<div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>'+
+      '<div class="t-body"><div class="t-label">'+t.label+'</div>'+
+      (t.note?'<div class="t-note">'+t.note+'</div>':'')+tagHtml+'</div>';
+    el.onclick=()=>{checks[t.id]=!checks[t.id];setDayChecks(viewDay,checks);renderTasks();renderRing();saveScore();updateStreak();if(checks[t.id])toast('✓ '+t.label);};
+    list.appendChild(el);
+  });
+}
+function renderRing(){
+  const tasks=buildDay(viewDay),checks=dayChecks(viewDay);
+  let done=0;tasks.forEach(t=>{if(checks[t.id])done++;});
+  const pct=tasks.length?Math.round(done/tasks.length*100):0,C=263.9;
+  $('#ringFill').style.strokeDashoffset=C-(C*pct/100);$('#ringPct').textContent=pct+'%';
+  const T=$('#ringTitle'),M=$('#ringMsg');
+  if(pct===0){T.textContent='Hoy es tu día';M.textContent='Marca cada disciplina al cumplirla. No buscas perfección, buscas avanzar.';}
+  else if(pct<50){T.textContent='Vas comenzando';M.textContent='Buen arranque. Un paso después del otro.';}
+  else if(pct<100){T.textContent='Ya casi';M.textContent='Vas firme. Termina lo que empezaste.';}
+  else{T.textContent='¡Día completo! 🔥';M.textContent='Cumpliste tu palabra hoy. Así se reconstruye la confianza.';}
+}
+function saveScore(){
+  const tasks=buildDay(viewDay),checks=dayChecks(viewDay);
+  let done=0;tasks.forEach(t=>{if(checks[t.id])done++;});
+  Store.set('score_'+todayKey(),tasks.length?done/tasks.length:0);
+}
+function updateStreak(){
+  let streak=0;
+  for(let i=0;i<60;i++){
+    const d=new Date();d.setDate(d.getDate()-i);
+    const sc=Store.get('score_'+todayKey(d),null);
+    if(sc===null){if(i===0)continue;else break;}
+    if(sc>=0.7)streak++;else{if(i!==0)break;}
+  }
+  $('#streakNum').textContent=streak;$('#streakBig').textContent=streak;
+  const C=263.9,frac=Math.min(streak/14,1);
+  $('#ringFill2').style.strokeDashoffset=C-(C*frac);
+}
+function renderWater(){
+  const g=$('#glasses');g.innerHTML='';
+  let n=Store.get('water_'+todayKey(),0);$('#waterCount').textContent=n;
+  for(let i=0;i<8;i++){
+    const el=document.createElement('div');el.className='glass'+(i<n?' full':'');
+    el.textContent='💧';el.style.opacity=i<n?'1':'.35';
+    el.onclick=()=>{let c=Store.get('water_'+todayKey(),0);c=(i<c)?i:i+1;Store.set('water_'+todayKey(),c);renderWater();if(c===8)toast('💧 ¡2 litros completos!');};
+    g.appendChild(el);
+  }
+}
+function renderFood(){
+  const w=$('#mealList');w.innerHTML='';
+  [1,2,3,4,5,6,0].forEach(d=>{
+    const M=MEALS[d];
+    const c=document.createElement('div');c.className='card'+(d===realDay?' ex-routine':'');
+    c.innerHTML='<div class="meta">'+DIAS[d]+(d===realDay?' · hoy':'')+'</div>'+
+      '<div class="meal"><span>🌅 Desayuno</span><p>'+M.des+'</p></div>'+
+      '<div class="meal"><span>🍽️ Almuerzo</span><p>'+M.alm+'</p></div>'+
+      '<div class="meal"><span>🌙 Cena ligera</span><p>'+M.cen+'</p></div>';
+    w.appendChild(c);
+  });
+}
+function renderExercise(){
+  const run=RUN_DAYS.includes(viewDay),box=$('#exToday');
+  if(run){const r=rutinaDe(viewDay);box.innerHTML='Hoy (<b>'+DIAS[viewDay]+'</b>) es día de trote. Te toca la <b>Rutina '+r+'</b> después de correr.';}
+  else{box.innerHTML='Hoy (<b>'+DIAS[viewDay]+'</b>) es descanso físico. No hay trote ni funcional — deja que el cuerpo se recupere.';}
+  const w=$('#routineList');w.innerHTML='';
+  ['A','B','C'].forEach(k=>{
+    const R=ROUTINES[k],active=run&&rutinaDe(viewDay)===k;
+    const c=document.createElement('div');c.className='card'+(active?' ex-routine':'');
+    let s='<div class="meta">'+(active?'★ Hoy · ':'')+R.nombre+'</div>';
+    R.sets.forEach(x=>{s+='<div class="set"><span>'+x[0]+'</span><b>'+x[1]+'</b></div>';});
+    c.innerHTML=s;w.appendChild(c);
+  });
+}
 function renderWeek(){
-  const w=$('#weekBars'); w.innerHTML='';
+  const w=$('#weekBars');w.innerHTML='';
   for(let i=6;i>=0;i--){
-    const d=new Date(); d.setDate(d.getDate()-i);
+    const d=new Date();d.setDate(d.getDate()-i);
     const sc=Store.get('score_'+todayKey(d),0)||0;
-    const col=document.createElement('div'); col.style.flex='1';col.style.display='flex';col.style.flexDirection='column';col.style.alignItems='center';col.style.gap='6px';col.style.height='100%';col.style.justifyContent='flex-end';
-    const bar=document.createElement('div'); bar.style.width='100%';bar.style.borderRadius='6px';bar.style.height=Math.max(6,sc*90)+'px';
-    bar.style.background=sc>=0.7?'var(--oro)':'var(--navy3)';bar.style.border='1px solid var(--line)';
-    const lab=document.createElement('div'); lab.style.fontSize='11px';lab.style.color='var(--muted)';lab.textContent=DIAS_S[d.getDay()];
+    const col=document.createElement('div');col.style.cssText='flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;height:100%;justify-content:flex-end;';
+    const bar=document.createElement('div');bar.style.cssText='width:100%;border-radius:6px;height:'+Math.max(6,sc*90)+'px;background:'+(sc>=0.7?'var(--oro)':'var(--navy3)')+';border:1px solid var(--line);';
+    const lab=document.createElement('div');lab.style.cssText='font-size:11px;color:var(--muted);';lab.textContent=DIAS_S[d.getDay()];
     col.appendChild(bar);col.appendChild(lab);w.appendChild(col);
   }
 }
-
-/* ---------- toast ---------- */
 let toastT;
 function toast(m){const e=$('#toast');e.textContent=m;e.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>e.classList.remove('show'),1600);}
 
-/* ---------- navegación ---------- */
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
   document.querySelectorAll('.view').forEach(x=>x.classList.remove('show'));
@@ -710,10 +722,10 @@ document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
 });
 $('#resetDay').onclick=()=>{setDayChecks(viewDay,{});Store.set('water_'+todayKey(),0);Store.set('score_'+todayKey(),0);renderAll();toast('Día reiniciado');};
 
-/* ---------- render maestro ---------- */
+/* ---------- init ---------- */
 soundChoice=Store.get('sndChoice','off');
-Sound.vol=(Store.get('sndVol',50))/100;
-$('#sndVol').value=Store.get('sndVol',50);
+Sound.vol=(Store.get('sndVol',60))/100;
+$('#sndVol').value=Store.get('sndVol',60);
 function renderAll(){renderPills();renderHeader();renderTasks();renderRing();renderWater();renderFood();renderExercise();renderPomo();renderWeek();renderSnd();updateStreak();}
 renderAll();
 ['touchend','click'].forEach(ev=>document.addEventListener(ev,()=>{if(Sound.ctx&&Sound.ctx.state==='suspended'){try{Sound.ctx.resume();}catch(e){}}},{passive:true}));
